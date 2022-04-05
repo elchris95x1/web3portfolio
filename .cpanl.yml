@@ -3,3 +3,4 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/web3portfolio/public_html/
     - /bin/cp -R public $DEPLOYPATH
+    - /bin/cp -R src $DEPLOYPATH
