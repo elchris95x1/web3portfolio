@@ -1,4 +1,5 @@
 import Spline from '@splinetool/react-spline';
+import {Helmet} from "react-helmet";
 import profilePic from "./images/yo.jpg";
 import {
   VerticalTimeline,
@@ -15,6 +16,14 @@ function App() {
   const [isActive, setIsActive] = useState(false);
   return (
     <AnimatePresence initial={false}>
+      <div className="application">
+    <Helmet>
+        <meta charSet="utf-8" />
+        <title>Christian Lara</title>
+        <link rel="canonical" href="http://christianlaradev.com/" />
+        <meta name="Computer programmer based in Waco Texas" content="Helmet application" />
+    </Helmet>
+    </div>
       <div className="flex w-screen min-h-screen flex-col items-center justify-center relative bg-primary pb-20">
         <nav className="w-full px-6 z-50  fixed inset-x-0 top-2 flex justify-center items-center ">
           <div className=" w-full md:w-880 bg-navBar p-4 rounded-2xl flex items-center">
