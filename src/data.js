@@ -14,12 +14,30 @@ import img4 from "./images/thumb-pinterest-clone-reactjs.png";
 export const Experience = [
   {
     id: 1,
+    date: "2019 - 2021",
+    iconsSrc: <IoCodeWorking />,
+    title: "Bachelor of Science, Information Systems",
+    location: "Tarleton State University",
+    description:
+      "* Learned about the manegement and marketing of a tech company.",
+  },
+  {
+    id: 2,
     date: "2019 - 2020",
     iconsSrc: <IoCodeWorking />,
     title: "Data Collection and Analysis (Intern)",
     location: "Versalift: ​ Waco, TX",
     description:
-      "* Collected time studies data for each job. The data was imputed into a spreadsheet to be analyzed.",
+      "* Collected and interpreted data to improve production on the line of work. Implemented more than 5 changes in the line of work to reduce wasted time by 10%.",
+  },
+  {
+    id: 3,
+    date: "2016 - 2017",
+    iconsSrc: <IoCodeWorking />,
+    title: "Associate of Applied Science, Computer Programming Technology ",
+    location: "Texas State Technical College",
+    description:
+      "* Learned to program from begginer to advance level in multiple coding languages.",
   },
 ];
 
