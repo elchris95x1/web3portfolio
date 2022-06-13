@@ -8,12 +8,52 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { Experience, Projects, SocialLinks } from "./data";
 import { IoLogoGithub, IoMenu } from "react-icons/io5";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import docResume from "./docs/resume.pdf";
 
 function App() {
   const [isActive, setIsActive] = useState(false);
+  const [avatarURL, setAvatarURL] = useState();
+  const [githubUsername, setGitHubUsername] = useState();
+  const [repoData, setRepoData] = useState();
+
+  async function repoDataURL() {
+    //Get repo data about github user
+    await fetch("https://api.github.com/users/elchris95x1/repos")
+      .then((res) => res.json())
+      .then(
+        (result) => {
+          console.log(36, result);
+          const list = result.map((item) => (
+            <div className="text-center">
+              <a target="_blank" href={item.svn_url}>
+                {item.name}
+              </a>
+            </div>
+          ));
+          setRepoData(list);
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
+  }
+
+  useEffect(() => {
+    fetch("https://api.github.com/users/elchris95x1")
+      .then((res) => res.json())
+      .then(
+        (result) => {
+          console.log(result);
+          setAvatarURL(result.avatar_url);
+          setGitHubUsername(result.login);
+        },
+        (error) => {
+          console.log(error);
+        }
+      );
+  }, []);
   return (
     <AnimatePresence initial={false}>
       <div className="application">
