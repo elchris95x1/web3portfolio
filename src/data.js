@@ -19,10 +19,19 @@ export const Experience = [
     title: "Bachelor of Science, Information Systems",
     location: "Tarleton State University",
     description:
-      "* Learned about the manegement and marketing of a tech company.",
+      "* 3.7",
   },
   {
     id: 2,
+    date: "2021 - 2021",
+    iconsSrc: <IoCodeWorking />,
+    title: "Marketing Specialist (Intern)",
+    location: "FuerzaXMexico: ​ Zacatecas Mexico",
+    description:
+      "* Managed the social media accounts of a political party in Pinos, Zacatecas Mexico. I was in charge of creating content to connect with the people from that municipality.",
+  },
+  {
+    id: 3,
     date: "2019 - 2020",
     iconsSrc: <IoCodeWorking />,
     title: "Data Collection and Analysis (Intern)",
@@ -31,13 +40,22 @@ export const Experience = [
       "* Collected and interpreted data to improve production on the line of work. Implemented more than 5 changes in the line of work to reduce wasted time by 10%.",
   },
   {
-    id: 3,
+    id: 4,
+    date: "2018 - 2019",
+    iconsSrc: <IoCodeWorking />,
+    title: "Associate of Applied Science and Art",
+    location: "Mclennan Community College",
+    description:
+      "* 3.6",
+  },
+  {
+    id: 5,
     date: "2016 - 2017",
     iconsSrc: <IoCodeWorking />,
     title: "Associate of Applied Science, Computer Programming Technology ",
     location: "Texas State Technical College",
     description:
-      "* Learned to program from begginer to advance level in multiple coding languages.",
+      "* 3.6",
   },
 ];
 
