@@ -1,6 +1,6 @@
 import Spline from '@splinetool/react-spline';
-import {Helmet} from "react-helmet";
-import profilePic from "./images/yo.jpg";
+import { Helmet } from "react-helmet";
+import profilePic from "./images/yo.png";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -54,16 +54,18 @@ function App() {
         }
       );
   }, []);
+
+
   return (
     <AnimatePresence initial={false}>
       <div className="application">
-    <Helmet>
-        <meta charSet="utf-8" />
-        <title>Christian Lara</title>
-        <link rel="canonical" href="http://christianlaradev.com/" />
-        <meta name="Computer programmer based in Waco Texas" content="Helmet application" />
-    </Helmet>
-    </div>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Christian Lara</title>
+          <link rel="canonical" href="http://christianlaradev.com/" />
+          <meta name="Computer programmer based in Waco Texas" content="Helmet application" />
+        </Helmet>
+      </div>
       <div className="flex w-screen min-h-screen flex-col items-center justify-center relative bg-primary pb-20">
         <nav className="w-full px-6 z-50  fixed inset-x-0 top-2 flex justify-center items-center ">
           <div className=" w-full md:w-880 bg-navBar p-4 rounded-2xl flex items-center">
@@ -97,12 +99,13 @@ function App() {
               <a
                 href={docResume}
                 download="Christian Lara.pdf"
-                target= "_blank"
+                target="_blank"
                 className="ml-auto text-base text-textBase font-medium hover:text-slate-100 cursor-pointer border border-textBase px-2 py-1 rounded-xl hover:border-gray-100 duration-100 ease-in"
               >
                 Download CV
               </a>
             </div>
+
 
             <motion.div
               whileTap={{ scale: 0.6 }}
@@ -111,65 +114,9 @@ function App() {
             >
               <IoMenu className="text-2xl text-textBase " />
             </motion.div>
-            {isActive && (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1.1 }}
-                exit={{ opacity: 0, scale: 0.5 }}
-                transition={{ delay: "0.1s", type: "spring" }}
-                className="p-4 w-275 bg-navBar rounded-lg fixed top-24 right-16 flex flex-col items-center justify-evenly gap-6"
-              >
-                <a
-                  href="#home"
-                  className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in"
-                  onClick={() => setIsActive(false)}
-                >
-                  Home
-                </a>
-                <a
-                  href="#about"
-                  className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in"
-                  onClick={() => setIsActive(false)}
-                >
-                  About
-                </a>
-                <a
-                  href="#projects"
-                  className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in"
-                  onClick={() => setIsActive(false)}
-                >
-                  Projects
-                </a>
-                <a
-                  href="#contacts"
-                  className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in"
-                  onClick={() => setIsActive(false)}
-                >
-                  Contact
-                </a>
-                <a
-                  href={docResume}
-                  download="Christian Lara.pdf"
-                  className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer border border-textBase px-2 py-1 rounded-xl hover:border-gray-100 duration-100 ease-in"
-                  onClick={() => setIsActive(false)}
-                >
-                  Download CV
-                </a>
-              </motion.div>
-            )}
+
           </div>
         </nav>
-
-
-
-        <div className="relative" id="home">
-          <Spline scene="https://draft.spline.design/Q6ZkWWdiJ2GNTNrC/scene.spline" />
-          <div className="absolute bottom-10 w-full flex justify-center items-center">
-            <div className="shadow-md p-4 flex items-center justify-center bg-zinc-900 rounded-3xl ">
-              <p className="text-white">Press and drag to orbit</p>
-            </div>
-          </div>
-        </div>
 
 
 
@@ -179,7 +126,7 @@ function App() {
             id="about"
           >
             <div className="w-full h-420 flex items-center justify-center">
-              <div className="w-275 h-340 relative bg-white rounded-md">
+              <div className="w-340 h-340 relative ">
                 <img
                   src={profilePic}
                   alt=""
@@ -188,17 +135,18 @@ function App() {
               </div>
             </div>
             <div className="w-full h-420 flex flex-col items-center justify-center ">
+              <p class="text-2xl text-white" >Christian Lara</p>
               <p className="text-lg text-textBase text-center">
-              A hardworking and passionate job seeker with strong organizational skills eager to secure an entry-level Data Analyst position or .net framework developer role. Ready to help the team achieve the company’s goals.
+                A hardworking and passionate job seeker with strong organizational skills eager to secure an entry-level Data Analyst position or .net framework developer role. Ready to help the team achieve the company’s goals.
               </p>
-
+                
               <button class="w-full md:w-auto relative mt-6 inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:ring-green-200 dark:focus:ring-green-800 hover:shadow-lg hover:shadow-teal-500/50 hover:dark:shadow-lg hover:dark:shadow-teal-800/80">
                 <span class="w-full md:w-auto relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                <a
-                  href={docResume}
-                  target= "_blank" >
-                  Resume
-                </a>
+                  <a
+                    href={docResume}
+                    target="_blank" >
+                    Resume
+                  </a>
                 </span>
               </button>
             </div>
@@ -256,7 +204,7 @@ function App() {
                     src={n.imageSrc}
                     className="w-full h-full object-cover rounded-md my-4 max-h-[150px]"
                     alt=""
-                    
+
                   />
 
                   <div className="flex flex-1 items-center justify-between">
@@ -265,7 +213,7 @@ function App() {
                         {n.techs}
                       </span>
                     </p>
-                    <a href={n.github} target= {n.target}>
+                    <a href={n.github} target={n.target}>
                       <motion.div whileTap={{ scale: 0.5 }}>
                         <IoLogoGithub className="text-textBase text-3xl cursor-pointer" />
                       </motion.div>
@@ -274,6 +222,7 @@ function App() {
                 </motion.div>
               ))}
           </section>
+
 
 
 
@@ -289,7 +238,7 @@ function App() {
                     whileTap={{ scale: 0.8 }}
                     href={n.link}
                     key={n.id}
-                    target= {n.target}
+                    target={n.target}
                     className="w-full md:w-auto px-3 md:px-8 py-5 border border-zinc-800 rounded-2xl hover:border-zinc-600 duration-100 ease-in-out cursor-pointer flex items-center justify-center gap-3"
                   >
                     {n.iconSrc}

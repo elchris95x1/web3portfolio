@@ -46,7 +46,7 @@ export const Experience = [
     title: "Associate of Applied Science and Art",
     location: "Mclennan Community College",
     description:
-      "* 3.6",
+      "* 3.7",
   },
   {
     id: 5,
