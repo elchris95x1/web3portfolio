@@ -26,7 +26,7 @@ export const Experience = [
     date: "2021 - 2021",
     iconsSrc: <IoCodeWorking />,
     title: "Marketing Specialist (Intern)",
-    location: "FuerzaXMexico: ​ Zacatecas Mexico",
+    location: "FuerzaXMexico: ​Pinos Zacatecas Mexico",
     description:
       "* Managed the social media accounts of a political party in Pinos, Zacatecas Mexico. I was in charge of creating content to connect with the people from that municipality.",
   },
