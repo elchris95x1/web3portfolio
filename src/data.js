@@ -16,7 +16,7 @@ export const Experience = [
     id: 1,
     date: "2019 - 2021",
     iconsSrc: <IoCodeWorking />,
-    title: "Bachelor of Science, Information Systems",
+    title: "Bachelor of Science, Information Technology",
     location: "Tarleton State University",
     description:
       "* 3.7",
@@ -43,7 +43,7 @@ export const Experience = [
     id: 4,
     date: "2018 - 2019",
     iconsSrc: <IoCodeWorking />,
-    title: "Associate of Applied Science and Art",
+    title: "Associate of Applied Science and Art, Information Technology",
     location: "Mclennan Community College",
     description:
       "* 3.7",
