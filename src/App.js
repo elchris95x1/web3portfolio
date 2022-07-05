@@ -79,10 +79,10 @@ function App() {
                 Home
               </a>
               <a
-                href="#about"
+                href="#experience"
                 className="text-base text-textBase font-medium hover:text-slate-100 cursor-pointer duration-100 ease-in"
               >
-                About
+                Experience
               </a>
               <a
                 href="#projects"
@@ -123,7 +123,7 @@ function App() {
         <main className="w-[80%] mt-4">
           <section
             className="w-full grid grid-cols-1 md:grid-cols-2 gap-4 my-24"
-            id="about"
+            id="home"
           >
             <div className="w-full h-420 flex items-center justify-center">
               <div className="w-340 h-340 relative ">
@@ -154,7 +154,8 @@ function App() {
 
 
 
-          <section className="w-full flex items-center justify-center">
+          <section className="w-full flex items-center justify-center"
+          id="experience">
             <VerticalTimeline>
               {Experience &&
                 Experience.map((n) => (
