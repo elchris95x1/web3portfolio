@@ -124,7 +124,7 @@ export const SocialLinks = [
       <IoLogoLinkedin className="text-blue-800 text-3xl cursor-pointer" />
     ),
     name: "LinkedIn",
-    link: "https://www.linkedin.com/in/chris-alvarez-8ba649227/",
+    link: "https://www.linkedin.com/in/chris-lara-8ba649227/",
     target: "_blank",
   },
   {

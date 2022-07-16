@@ -12,51 +12,11 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import docResume from "./docs/resume.pdf";
 import Header from "./components/header";
+import Footer from "./components/footer";
 
 function App() {
   
-  const [avatarURL, setAvatarURL] = useState();
-  const [githubUsername, setGitHubUsername] = useState();
-  const [repoData, setRepoData] = useState();
-
-  async function repoDataURL() {
-    //Get repo data about github user
-    await fetch("https://api.github.com/users/elchris95x1/repos")
-      .then((res) => res.json())
-      .then(
-        (result) => {
-          console.log(36, result);
-          const list = result.map((item) => (
-            <div className="text-center">
-              <a target="_blank" href={item.svn_url}>
-                {item.name}
-              </a>
-            </div>
-          ));
-          setRepoData(list);
-        },
-        (error) => {
-          console.log(error);
-        }
-      );
-  }
-
-  useEffect(() => {
-    fetch("https://api.github.com/users/elchris95x1")
-      .then((res) => res.json())
-      .then(
-        (result) => {
-          console.log(result);
-          setAvatarURL(result.avatar_url);
-          setGitHubUsername(result.login);
-        },
-        (error) => {
-          console.log(error);
-        }
-      );
-  }, []);
-
-
+  
   return (
     <AnimatePresence initial={false}>
       <div className="application">
@@ -176,32 +136,7 @@ function App() {
               ))}
           </section>
 
-
-
-
-          <section
-            id="contacts"
-            className="flex flex-col items-center justify-evenly w-full my-24"
-          >
-            <p className="text-2xl text-gray-400 capitalize">Follow me on</p>
-            <div className="flex items-center justify-evenly w-full my-4 flex-wrap gap-4">
-              {SocialLinks &&
-                SocialLinks.map((n) => (
-                  <motion.a
-                    whileTap={{ scale: 0.8 }}
-                    href={n.link}
-                    key={n.id}
-                    target={n.target}
-                    className="w-full md:w-auto px-3 md:px-8 py-5 border border-zinc-800 rounded-2xl hover:border-zinc-600 duration-100 ease-in-out cursor-pointer flex items-center justify-center gap-3"
-                  >
-                    {n.iconSrc}
-                    <p className="text-lg text-textBase">{n.name}</p>
-                  </motion.a>
-                ))}
-            </div>
-          </section>
-
-
+          <Footer/>
 
         </main>
       </div>
