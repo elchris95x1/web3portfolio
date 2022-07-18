@@ -10,7 +10,7 @@ import { Experience, Projects, SocialLinks } from "./data";
 import { IoLogoGithub, IoMenu } from "react-icons/io5";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import docResume from "./docs/resume.pdf";
+import docResume from "./docs/Resume.pdf";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import GitProjects from "./components/gitProjects";

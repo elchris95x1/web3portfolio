@@ -1,5 +1,5 @@
 import { useState } from "react";
-import docResume from "../docs/resume.pdf";
+import docResume from "../docs/Resume.pdf";
 import {  motion } from "framer-motion";
 import { IoMenu } from "react-icons/io5";
 
