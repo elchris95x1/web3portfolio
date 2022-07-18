@@ -103,14 +103,14 @@ export const SocialLinks = [
     target: "_blank",
   },
   {
-    id: 1,
+    id: 2,
     iconSrc: <IoLogoYoutube className="text-red-500 text-3xl cursor-pointer" />,
     name: "YouTube",
     link: "https://www.youtube.com/channel/UC6HP-fcMoHHbnOHIy6oS0qw",
     target: "_blank",
   },
   {
-    id: 1,
+    id: 3,
     iconSrc: (
       <IoLogoTwitter className="text-blue-500 text-3xl cursor-pointer" />
     ),
@@ -119,7 +119,7 @@ export const SocialLinks = [
     target: "_blank",
   },
   {
-    id: 1,
+    id: 4,
     iconSrc: (
       <IoLogoLinkedin className="text-blue-800 text-3xl cursor-pointer" />
     ),
@@ -128,7 +128,7 @@ export const SocialLinks = [
     target: "_blank",
   },
   {
-    id: 1,
+    id: 5,
     iconSrc: (
       <IoLogoGoogle className="text-green-500 text-3xl cursor-pointer" />
     ),
