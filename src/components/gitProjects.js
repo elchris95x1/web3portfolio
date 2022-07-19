@@ -26,10 +26,7 @@ export default function GitProjects() {
 
     }, []);
 
-
-
     return (
-
         <div className="flex flex-wrap items-center justify-evenly my-24 gap-4">
             {repoData.map(item => {
                 return (
