@@ -1,14 +1,12 @@
 import { useEffect, useState } from "react";
 import defImg from "../images/default.jpg";
 import { motion } from "framer-motion";
-import { IoLogoGithub, IoMenu } from "react-icons/io5";
+import { IoLogoGithub } from "react-icons/io5";
+// import { nanoid } from "nanoid"
 
 export default function GitProjects() {
     const [repoData, setRepoData] = useState([]);
 
-    const [name, setName] = useState();
-    const [language, setLanguage] = useState();
-    const [url, setUrl] = useState();
 
 
     useEffect(() => {
@@ -17,13 +15,12 @@ export default function GitProjects() {
             .then(
                 (result) => {
                     setRepoData(result);
-                    console.log(result);
+                    
                 },
                 (error) => {
                     console.log(error);
                 }
             );
-
     }, []);
 
     return (
@@ -48,7 +45,7 @@ export default function GitProjects() {
                                     {item.language}
                                 </span>
                             </p>
-                            <a href={item.html_url} target= "_blank">
+                            <a href={item.html_url} target= "_blank" rel="noreferrer">
                                 <motion.div whileTap={{ scale: 0.5 }}>
                                     <IoLogoGithub className="text-textBase text-3xl cursor-pointer" />
                                 </motion.div>

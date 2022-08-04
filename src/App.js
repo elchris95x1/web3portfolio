@@ -1,4 +1,4 @@
-import Spline from '@splinetool/react-spline';
+
 import { Helmet } from "react-helmet";
 import profilePic from "./images/yo.png";
 import {
@@ -6,10 +6,8 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import { Experience, Projects, SocialLinks } from "./data";
-import { IoLogoGithub, IoMenu } from "react-icons/io5";
-import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { Experience} from "./data";
+import { AnimatePresence } from "framer-motion";
 import docResume from "./docs/Resume.pdf";
 import Header from "./components/header";
 import Footer from "./components/footer";
@@ -48,16 +46,17 @@ function App() {
               </div>
             </div>
             <div className="w-full h-420 flex flex-col items-center justify-center ">
-              <p class="text-2xl text-white" >Christian Lara</p>
+              <p className="text-2xl text-white" >Christian Lara</p>
               <p className="text-lg text-textBase text-center">
                 A hardworking and passionate job seeker with strong organizational skills eager to secure an entry-level Data Analyst position or .net framework developer role. Ready to help the team achieve the company’s goals.
               </p>
                 
-              <button class="w-full md:w-auto relative mt-6 inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:ring-green-200 dark:focus:ring-green-800 hover:shadow-lg hover:shadow-teal-500/50 hover:dark:shadow-lg hover:dark:shadow-teal-800/80">
-                <span class="w-full md:w-auto relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+              <button className="w-full md:w-auto relative mt-6 inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:ring-green-200 dark:focus:ring-green-800 hover:shadow-lg hover:shadow-teal-500/50 hover:dark:shadow-lg hover:dark:shadow-teal-800/80">
+                <span className="w-full md:w-auto relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                   <a
                     href={docResume}
-                    target="_blank" >
+                    target="_blank" 
+                    rel="noreferrer">
                     Resume
                   </a>
                 </span>
