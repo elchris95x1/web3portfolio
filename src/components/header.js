@@ -1,5 +1,5 @@
 import { useState } from "react";
-import docResume from "../docs/Resume.pdf";
+import docResume from "../docs/CLresume.pdf";
 import {  motion } from "framer-motion";
 import { IoMenu } from "react-icons/io5";
 
@@ -39,6 +39,7 @@ export default function Header(){
                 href={docResume}
                 download="Christian Lara.pdf"
                 target="_blank"
+                rel="noreferrer"
                 className="ml-auto text-base text-textBase font-medium hover:text-slate-100 cursor-pointer border border-textBase px-2 py-1 rounded-xl hover:border-gray-100 duration-100 ease-in"
               >
                 Download CV

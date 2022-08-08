@@ -8,7 +8,7 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { Experience} from "./data";
 import { AnimatePresence } from "framer-motion";
-import docResume from "./docs/Resume.pdf";
+import docResume from "./docs/CLresume.pdf";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import GitProjects from "./components/gitProjects";
